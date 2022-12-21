@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+<h1 class="mb-4 text-center text-primary">LOGIN</h1>
+<form action="" method="post" class="d-flex flex-column align-items-center mb-4" style="color: #fff">
+    {% csrf_token %}
+    <span class="labels mb-2 mt-2">{{ form.username.label }}</span>
+    {{ form.username }}
+    <span class="labels mb-2 mt-2">{{ form.password.label }}</span>
+    {{ form.password }}
+    <input class="btn btn-lg btn-primary mt-4" type="submit" value="LOGIN">
+</form>
+<p style="color: #fff">Need an account? <a href="{% url 'user-register' %}">SIGN UP</a></p>
+</div>
+{% endblock %}

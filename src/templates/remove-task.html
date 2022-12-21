@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>do you want to delete this task</p>
+<a href="{% url 'task-list' %}"><button>cancel</button></a>
+<form action="", method="post">
+    {% csrf_token %}
+    <input type="submit" value="confirm">
+</form>
+{% endblock %}
