@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-z0qmcary^aaej&57xj7d9cex2i)%9@((a%@lhcf7snpwxv69e5'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -79,11 +79,11 @@ WSGI_APPLICATION = 'ToDo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'django_todo_nlz5',
-        'USER': 'django_todo_nlz5_user',
-        'PASSWORD': 'inPtDqg04FgubOS6uTHzJ7m6WQ9MDF5o',
-        'HOST': 'dpg-cehhi9p4reb94c20ip70-a',
-        'PORT': '5432',
+        'NAME': 'os.environ.get('DBNAME')',
+        'USER': 'os.environ.get('DBUSER')',
+        'PASSWORD': 'os.environ.get('DBPASSWORD')',
+        'HOST': os.environ.get('HOST'),
+        'PORT': os.environ.get('PORT'),
     }
 }
 
