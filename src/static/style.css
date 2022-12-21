@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+        
+.bg {
+    background: #020631;
+}
+        
+.text {
+    font-size: 22px;
+}
+        
+.hide {
+    display: none;
+}
+        
+.custom-profile {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+        
+.custom-nav-profile {
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+}
+        
+.custom-input {
+    border-color: transparent;
+}
+        
+.custom-input:focus {
+    border-color: transparent;
+    box-shadow: none;
+}
+        
+.add-btn {
+            
+}
+        
+.custom-btn {
+    color: black;
+    border: 0;
+    background-color: transparent; 
+}
